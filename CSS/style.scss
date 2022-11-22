@@ -1,0 +1,254 @@
+$color-text:#000;
+$color-bg:#FDF8EB;
+$color-bg2:#000;
+$color-accent:#898989;
+$color-accent2:#E40065;
+
+@mixin inner ($w:1170px) {
+    width: (1170/1600)*100%;
+    max-width: $w;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin flex($a:center, $j:space-between) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: $a;
+    justify-content: $j;
+}
+
+@mixin text($fz:14px) {
+    font-size: $fz;
+    font-family: Helvetica,
+        sans-serif;
+    line-height: (24/14);
+    letter-spacing: 0.05em;
+}
+
+@mixin py($t:70px, $b:100px) {
+    padding-top: $t;
+    padding-bottom: $b;
+}
+
+@mixin my($t:60px, $b:40px) {
+    margin-top: $t;
+    margin-bottom: $b;
+}
+
+@mixin title($t:"制作実績") {
+    @include text(38px);
+    font-weight: normal;
+
+    &:before {
+        content: $t;
+        display: block;
+        @include text(12px);
+        color: $color-accent;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        width: 120px;
+        height: 1px;
+        background-color: $color-text;
+        margin-top: 15px;
+    }
+}
+
+// BASE
+body {
+    @include text;
+}
+
+a {
+    text-decoration: none;
+}
+
+// BLOCK
+
+// header
+.header {
+    @include py();
+
+    &__inner {
+        @include inner;
+        @include flex;
+    }
+}
+
+.nav {
+    &__list {
+        @include flex;
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    &__item {
+        margin-left: 30px;
+    }
+
+    &__text {
+        color: $color-text;
+        @include text;
+    }
+}
+
+// footer
+.footer {
+    @include py(100px, 60px);
+    background-color: #fff;
+
+    &__inner {
+        @include inner;
+        text-align: right;
+    }
+
+    &__copy {
+        @include text(12px);
+        color: #898989;
+    }
+}
+
+// MAIN
+// mainVisual
+.visual {
+    &__catch {
+        width: 100%;
+        height: auto;
+    }
+}
+
+// WORK
+.work {
+    @include py(100px, 78px);
+
+    &__inner {
+        @include inner;
+    }
+
+    &__title {
+        @include title;
+    }
+
+    &__text {
+        @include my;
+
+        &--eng {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            @include my(0, 0);
+        }
+    }
+
+    &__post {
+        @include flex;
+        @include py(60px, 0)
+    }
+
+    &__item {
+        width: 370px/1170px*100%;
+    }
+}
+
+// UNIT
+.unit {
+    &__title {
+        @include text(20px);
+        font-weight: normal;
+        @include my(20px, 10px)
+    }
+
+    &__text {
+        @include text(12px);
+        color: $color-accent;
+    }
+}
+
+// PROJECT
+.project {
+    @include py(100px, 100px);
+    background-color: $color-bg;
+
+    &__inner {
+        @include inner;
+    }
+
+    &__title {
+        @include title("企画運営");
+    }
+
+    &__text {
+        @include my;
+
+        &--eng {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            @include my(0, 0);
+        }
+    }
+
+    &__post {
+        @include flex;
+        @include my(60px, 0);
+    }
+
+    &__item {
+        width: (560px/1170px)*100%;
+    }
+}
+
+// CARD
+.card {
+    &__title {
+        @include text(12px);
+        color: #fff;
+        display: inline-block;
+        background-color: $color-accent2;
+        padding: 2px 10px;
+        border-radius: 10px;
+        @include my(30px, 30px);
+    }
+
+    &__text {
+        @include text(20px);
+    }
+}
+
+// newsLetter
+.newsLetter {
+    background-color: $color-bg2;
+    @include py(100px, 100px);
+
+    &__inner {
+        @include inner;
+    }
+
+    &__title {
+        @include text(32px);
+        color: #fff;
+        font-weight: normal;
+        font-family: sans-serif;
+        text-align: center;
+        @include my(0, 30px);
+    }
+
+    &__field {
+        @include flex(center, center);
+    }
+
+    &__email {
+        width: 300px;
+    }
+
+    &__btn {
+        color: #fff;
+        @include text;
+        background-color: $color-accent2;
+        width: 100px;
+        padding: 3px 0;
+        text-align: center;
+    }
+}
