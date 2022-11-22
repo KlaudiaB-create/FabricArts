@@ -25,6 +25,12 @@ a {
   justify-content: space-between;
 }
 
+.nav__inner {
+  width: 73.125%;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .nav__list {
   display: flex;
   flex-wrap: wrap;
@@ -43,6 +49,30 @@ a {
   font-family: Helvetica, sans-serif;
   line-height: 1.7142857143;
   letter-spacing: 0.05em;
+}
+.nav__title {
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 32px;
+  font-family: Helvetica, sans-serif;
+  line-height: 1.7142857143;
+  letter-spacing: 0.05em;
+  margin-bottom: 30px;
+  color: #fff;
+}
+.nav--black {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: #000;
+}
+.nav__link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  margin: 0;
 }
 
 .footer {
@@ -141,6 +171,9 @@ a {
   line-height: 1.7142857143;
   letter-spacing: 0.05em;
   color: #898989;
+}
+.unit__detail {
+  margin-top: 40px;
 }
 
 .project {
@@ -262,5 +295,103 @@ a {
   width: 100px;
   padding: 3px 0;
   text-align: center;
+}
+
+.company {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.company__inner {
+  width: 73.125%;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.company__detail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.company__title {
+  font-size: 38px;
+  font-family: Helvetica, sans-serif;
+  line-height: 1.7142857143;
+  letter-spacing: 0.05em;
+  font-weight: normal;
+}
+.company__title:before {
+  content: "制作実績";
+  display: block;
+  font-size: 12px;
+  font-family: Helvetica, sans-serif;
+  line-height: 1.7142857143;
+  letter-spacing: 0.05em;
+  color: #898989;
+}
+.company__title:after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 1px;
+  background-color: #000;
+  margin-top: 15px;
+}
+.company__textarea {
+  width: 59.8290598291%;
+}
+.company__card {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding-top: 150px;
+  padding-bottom: 160px;
+  padding-left: 80px;
+  color: #fff;
+}
+.company__card--first {
+  background: url(../images/bg_project01.jpg) no-repeat center;
+}
+.company__card--second {
+  background: url(../images/bg_project02.jpg) no-repeat center;
+}
+.company__post {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.company__unit {
+  width: 31.6239316239%;
+}
+
+.tag {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+.tag__item {
+  margin-bottom: 15px;
+}
+.tag__item:first-child {
+  margin-top: 40px;
+}
+.tag__item:last-child {
+  margin-bottom: 0;
+}
+
+.link__item {
+  margin-left: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #fff;
+}
+.link__item:first-child {
+  margin-left: 0;
+}
+.link__item:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+.link__text {
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
