@@ -302,6 +302,14 @@ a {
         width: (700px/1170px)*100%;
     }
 
+    &__text {
+        &--eng {
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+            margin-top: 40px;
+        }
+    }
+
     &__card {
         @include my(60px, 60px);
         @include py(150px, 160px);
